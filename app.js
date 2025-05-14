@@ -15,11 +15,13 @@ const checkWeather = async () => {
   console.log(data);
 
   const weatherIcon = document.querySelector("#weatherIcon");
-  if (data.main.temp > 26 || data.main.temp <= 40) {
+  if (data.main.temp >= 26 && data.main.temp <= 40) {
     weatherIcon.src = "images/sunny.png";
-  } else if (data.main.temp <= 0 || data.main.temp <= 5) {
+  }
+  if (data.main.temp <= 5) {
     weatherIcon.src = "images/snowflake.png";
   }
+
   const correctTemp = Math.floor(data.main.temp) + "°C";
   temp.textContent = correctTemp;
   cityName.textContent = data.name;
