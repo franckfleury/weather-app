@@ -47,3 +47,14 @@ body {
   border-radius: 30px;
   cursor: pointer;
 }
+#check-weather #first {
+  margin-top: 50px;
+}
+#check-weather #first .temp {
+  font-size: 2.5rem;
+  text-align: center;
+}
+#check-weather #first .city {
+  font-size: 3.5rem;
+  text-align: center;
+}
